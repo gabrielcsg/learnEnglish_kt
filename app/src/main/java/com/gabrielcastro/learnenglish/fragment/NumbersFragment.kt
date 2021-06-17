@@ -11,7 +11,7 @@ import com.gabrielcastro.learnenglish.R
 
 
 class NumbersFragment : Fragment(), View.OnClickListener {
-    private lateinit var mediaPlayer: MediaPlayer
+    private var mediaPlayer: MediaPlayer? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -65,9 +65,15 @@ class NumbersFragment : Fragment(), View.OnClickListener {
     }
 
     private fun playSong() {
-        mediaPlayer.start()
-        mediaPlayer.setOnCompletionListener {
-            mediaPlayer.release()
+        mediaPlayer?.start()
+        mediaPlayer?.setOnCompletionListener {
+            mediaPlayer?.release()
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer?.release()
+        mediaPlayer = null
     }
 }
