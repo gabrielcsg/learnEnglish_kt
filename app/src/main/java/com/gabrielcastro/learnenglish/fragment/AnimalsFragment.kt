@@ -71,9 +71,4 @@ class AnimalsFragment : Fragment(), View.OnClickListener {
             mediaPlayer.release()
         }
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        mediaPlayer.release()
-    }
 }
