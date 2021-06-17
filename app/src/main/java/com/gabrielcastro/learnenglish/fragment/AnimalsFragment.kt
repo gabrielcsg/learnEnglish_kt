@@ -11,7 +11,7 @@ import com.gabrielcastro.learnenglish.R
 
 
 class AnimalsFragment : Fragment(), View.OnClickListener {
-    lateinit var mediaPlayer: MediaPlayer
+    private lateinit var mediaPlayer: MediaPlayer
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

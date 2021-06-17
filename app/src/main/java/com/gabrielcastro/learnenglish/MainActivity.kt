@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportActionBar?.elevation = 0F;
+        supportActionBar?.elevation = 0F
 
         val smartTabLayout = findViewById<SmartTabLayout>(R.id.smartTabLayout)
         val viewPager = findViewById<ViewPager>(R.id.viewPager)
@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
             FragmentPagerItems.with(this)
                 .add(FragmentPagerItem.of("Animals", AnimalsFragment::class.java))
                 .add(FragmentPagerItem.of("Numbers", NumbersFragment::class.java))
-                .add(FragmentPagerItem.of("Vowels", VowelsFragment::class.java))
                 .create()
         )
 
